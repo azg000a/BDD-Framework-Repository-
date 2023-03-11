@@ -8,6 +8,7 @@ public class POMFactory extends BaseSetup {
 	private RetailSignInPage signInPage;
 	private RetailAccountPage accountPage;
 	
+	
 	public POMFactory() {
 		this.homePage = new RetailHomePage();
 		this.signInPage = new RetailSignInPage();

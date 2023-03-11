@@ -52,7 +52,7 @@ public class CommonUtility extends BaseSetup {
 	public void sendText(WebElement element, String value) {
 		this.waitTillPresence(element). sendKeys(value);
 	}
-	
+	 
 	
 	public String getElementText(WebElement element) {
 		return this.waitTillPresence(element).getText();

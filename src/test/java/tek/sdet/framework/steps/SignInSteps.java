@@ -11,6 +11,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import tek.sdet.framework.pages.POMFactory;
 import tek.sdet.framework.utilities.CommonUtility;
+import tek.sdet.framework.utilities.DataGeneratorUtility;
 
 public class SignInSteps extends CommonUtility{
 	
@@ -58,7 +59,9 @@ public class SignInSteps extends CommonUtility{
 	@When("User fill the signUp information with bellow data")
 	public void userFillTheSignUpInformationWithBellowData(DataTable dataTable) {
 		List<Map<String,String>> signUpInformation = dataTable.asMaps(String.class, String.class);
-		sendText(factory.signInPage().signUpNameField,signUpInformation.get(0).get("name"));
+		sendText(factory.signInPage().signUpNameField,DataGeneratorUtility.data(signUpInformation.get(0).get("name")));
+
+	
 		sendText(factory.signInPage().signUpEmailField,signUpInformation.get(0).get("email"));
 		sendText(factory.signInPage().signUpPasswordField,signUpInformation.get(0).get("password"));
 		sendText(factory.signInPage().signUpConfirmPassword,signUpInformation.get(0).get("confirmPassword"));

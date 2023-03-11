@@ -9,10 +9,10 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		tags = "@test",
+		tags = "@testingg",
 		features = ("classpath:features"),
 		glue = "tek.sdet.framework",
-		dryRun = true,
+		dryRun = false,
 		plugin = {
 				"pretty",
 				"html:target/htmlReports/cucumber-pretty.html",
@@ -26,3 +26,5 @@ import io.cucumber.junit.CucumberOptions;
 public class TestRunner {
 
 }
+  
+
